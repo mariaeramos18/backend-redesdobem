@@ -31,7 +31,6 @@ public class DoacaoController {
         return service.buscar(id);
     }
 
-    // Métodos adicionais...
     @GET
     @Path("/listar")
     public Response listarTodas() {
