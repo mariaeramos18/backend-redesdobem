@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -19,57 +21,32 @@ import lombok.Data;
  */
 
 @Entity
-@Table(name = "DOACAO")
+@Table(name = "doacao")
 @Data
 public class Doacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "DoacaoID")
-    private Long doacaoId;
+    @Column(nullable = false)
+    private Integer doacao_id;
 
-    @Column(name = "DoadorID", nullable = false)
-    private Long doadorId;
+    @ManyToOne
+    @JoinColumn(name = "doador_id")
+    private Doador doador;
 
-    @Column(name = "DataCadastro", nullable = false)
-    private LocalDateTime dataCadastro;
+    @Column(length = 100, nullable = false)
+    private String tipo_alimento;
 
-    @Column(name = "DataAtualizacao")
-    private LocalDateTime dataAtualizacao;
-
-    @Column(name = "StatusDoacao", length = 50)
-    private String statusDoacao;
-
-    @Column(name = "Observacoes", columnDefinition = "TEXT")
-    private String observacoes;
-
-    @Column(name = "QuantidadeAvaliada")
-    private Double quantidadeAvaliada;
-
-    @Column(name = "UnidadeMedida", length = 20)
-    private String unidadeMedida;
-
-    @Column(name = "CondicoesArmazenamento", columnDefinition = "TEXT")
-    private String condicoesArmazenamento;
-
-    @Column(name = "MotivoCancelamento", columnDefinition = "TEXT")
-    private String motivoCancelamento;
-
-    @Column(name = "DataEntrega")
-    private LocalDateTime dataEntrega;
-
-    @Column(name = "LocalEntregaColeta", columnDefinition = "TEXT")
-    private String localEntregaColeta;
-
-    @PrePersist
-    protected void onCreate() {
-        dataCadastro = LocalDateTime.now();
-        if (statusDoacao == null || statusDoacao.isEmpty()) {
-            statusDoacao = "PENDENTE";
-        }
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        dataAtualizacao = LocalDateTime.now();
-    }
+    
+//    @PrePersist
+//    protected void onCreate() {
+//        dataCadastro = LocalDateTime.now();
+//        if (statusDoacao == null || statusDoacao.isEmpty()) {
+//            statusDoacao = "PENDENTE";
+//        }
+//    }
+//
+//    @PreUpdate
+//    protected void onUpdate() {
+//        dataAtualizacao = LocalDateTime.now();
+//    }
 }

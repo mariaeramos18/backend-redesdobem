@@ -32,4 +32,11 @@ public class UsuarioController {
     public Response salvar(Usuario u) {
         return service.salvar(u);
     }
+    
+    							/**AQUI COLOCAREMOS A API PARA DELETAR**/
+//    @POST
+//    @Path("/deletar")
+//    public Response deletar(Usuario u) {
+//        return service.deletar(u);
+//    }
 }

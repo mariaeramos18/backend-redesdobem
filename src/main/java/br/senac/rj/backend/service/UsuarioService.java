@@ -33,5 +33,18 @@ public class UsuarioService {
         String token = authService.gerarToken(email);
         return Response.ok(token).build();
     }
+    
+//    public Response deletar(String email, String senha) {
+//    	Usuario usuario = dao.buscarPorEmailSenha(email, senha);
+//    	if (usuario == null) {
+//            return Response.status(Response.Status.UNAUTHORIZED)
+//            		.entity("{\"erro\":\"Dados incorretos.\"}")
+//            		.build();
+//        }
+////    	String token = authService.gerarToken(email);
+////        return Response.ok(token).build();
+//    	
+//    	/*AQUI COLOCAMOS PARA DELETAR O USUARIO*/
+//    }
 
 }

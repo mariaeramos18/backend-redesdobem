@@ -11,7 +11,7 @@ import br.senac.rj.backend.entity.Doacao;
 
 public class DoacaoDao {
     private static final EntityManagerFactory emf =
-            Persistence.createEntityManagerFactory("backendPU");
+            Persistence.createEntityManagerFactory("backendPU2");
 
     public Doacao salvar(Doacao d) {
         EntityManager em = emf.createEntityManager();
