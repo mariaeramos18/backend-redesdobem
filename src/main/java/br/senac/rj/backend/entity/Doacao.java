@@ -28,20 +28,22 @@ public class Doacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Integer doacao_id;
-
+    
+    //Nome do alimento
     @Column(length = 100, nullable = false)
     private String tipo_alimento;
 
     @Column(nullable = false)
     private Integer quantidade;
     
+    //Qual unidade de medidada da doação. Ml ou Kg de alimentos vai doar
     @Column(nullable = false)
     private String unidade;
     
 //    @Column(columnDefinition = "DATETIME")
 //    private byte data_cadastro;   
     
-    @ManyToOne
-    @JoinColumn(name = "doador_id")
-    private Doador doador;
+//    @ManyToOne
+//    @JoinColumn(name = "doador_id")
+//    private Doador doador;
 }
