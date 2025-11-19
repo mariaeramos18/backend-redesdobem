@@ -14,9 +14,9 @@ import jakarta.ws.rs.core.Response;
 /**
  * 
  * @author reinaldo.jose
- * Classe que é um controller REST (recurso JAX-RS) da sua aplicação, responsável por expor endpoints HTTP relacionados à entidade Evento.
+ * Classe que é um controller REST (recurso JAX-RS) da sua aplicação, responsável por expor endpoints HTTP relacionados à entidade Organizacao.
  */
-@Path("/doador")					/*TROCAR PELO NOME DA CLASSE UTILIZAR O CTRL+F COM CASE SENSITIVE*/
+@Path("/organizacao")					/*TROCAR PELO NOME DA CLASSE UTILIZAR O CTRL+F COM CASE SENSITIVE*/
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class OrganizacaoController {						

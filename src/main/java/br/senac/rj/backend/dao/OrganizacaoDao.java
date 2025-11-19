@@ -8,13 +8,13 @@ import jakarta.persistence.Persistence;
 public class OrganizacaoDao {
 	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("backendPU2");
 
-	public Organizacao salvar(Organizacao doador) {
+	public Organizacao salvar(Organizacao organizacao) {
 		EntityManager em = emf.createEntityManager();
 		try {
 			em.getTransaction().begin();
-			Organizacao EventoSalvo = em.merge(doador); // obter objeto completo salvo
+			Organizacao OrganizacaoSalvo = em.merge(organizacao); // obter objeto completo salvo
 			em.getTransaction().commit();
-			return EventoSalvo;
+			return OrganizacaoSalvo;
 		} catch (Exception e) {
 			if (em.getTransaction().isActive()) {
 				em.getTransaction().rollback(); // desfazer transações pendentes
