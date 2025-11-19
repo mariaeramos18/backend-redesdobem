@@ -29,24 +29,19 @@ public class Doacao {
     @Column(nullable = false)
     private Integer doacao_id;
 
-    @ManyToOne
-    @JoinColumn(name = "doador_id")
-    private Doador doador;
-
     @Column(length = 100, nullable = false)
     private String tipo_alimento;
 
+    @Column(nullable = false)
+    private Integer quantidade;
     
-//    @PrePersist
-//    protected void onCreate() {
-//        dataCadastro = LocalDateTime.now();
-//        if (statusDoacao == null || statusDoacao.isEmpty()) {
-//            statusDoacao = "PENDENTE";
-//        }
-//    }
-//
-//    @PreUpdate
-//    protected void onUpdate() {
-//        dataAtualizacao = LocalDateTime.now();
-//    }
+    @Column(nullable = false)
+    private String unidade;
+    
+//    @Column(columnDefinition = "DATETIME")
+//    private byte data_cadastro;   
+    
+    @ManyToOne
+    @JoinColumn(name = "doador_id")
+    private Doador doador;
 }
