@@ -24,9 +24,9 @@ public class Usuario {
     private String email;
 
 //		Precisa colocar usuario_id como ID aqui?
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
     
     @Column(length = 80, nullable = false)
     private String nome;
