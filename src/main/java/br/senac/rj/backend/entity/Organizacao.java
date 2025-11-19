@@ -27,13 +27,13 @@ public class Organizacao {
     private String nome;
     
 //    @Column(length = 20, nullable = false)
-//    private String cpf_cnpj;
+//    private String cnpj;
 //    
 //    @Column(length = 100, nullable = false)
 //    private String cidade;
 //    
 //    @Column(nullable = false)
-//    private Integer total_doacoes;
+//    private Integer total_recebimentos;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
