@@ -1,7 +1,7 @@
 package br.senac.rj.backend.controller;
 
-import br.senac.rj.backend.entity.Doador;
-import br.senac.rj.backend.service.DoadorService;
+import br.senac.rj.backend.entity.Organizacao;
+import br.senac.rj.backend.service.OrganizacaoService;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -19,12 +19,12 @@ import jakarta.ws.rs.core.Response;
 @Path("/doador")					/*TROCAR PELO NOME DA CLASSE UTILIZAR O CTRL+F COM CASE SENSITIVE*/
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class DoadorController {						
-    private final DoadorService service = new DoadorService();
+public class OrganizacaoController {						
+    private final OrganizacaoService service = new OrganizacaoService();
 
     @POST
     @Path("/salvar")		/*Salvar e atualizar estão utilizando esse mesmo ngc*/
-    public Response salvar(Doador a) {
+    public Response salvar(Organizacao a) {
         return service.salvar(a);
     }
 

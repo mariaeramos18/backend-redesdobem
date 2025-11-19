@@ -28,7 +28,7 @@
 
 	<persistence-unit name="backendPU2" transaction-type="RESOURCE_LOCAL">
 		<!-- Classes das tabelas -->
-		<class>br.senac.rj.backend.entity.Doador</class>
+		<class>br.senac.rj.backend.entity.Organizacao</class>
 		<class>br.senac.rj.backend.entity.Doacao</class>
 		<class>br.senac.rj.backend.entity.Usuario</class>
 

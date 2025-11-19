@@ -21,7 +21,7 @@ public class JaxRsApplication extends Application {
         resources.add(br.senac.rj.backend.controller.TurmaController.class);
         resources.add(br.senac.rj.backend.controller.UsuarioController.class);
         resources.add(br.senac.rj.backend.controller.DoacaoController.class);
-        resources.add(br.senac.rj.backend.controller.DoadorController.class);
+        resources.add(br.senac.rj.backend.controller.OrganizacaoController.class);
         resources.add(br.senac.rj.backend.filter.AuthFilter.class);
         return resources;
     }

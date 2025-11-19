@@ -1,7 +1,7 @@
 package br.senac.rj.backend.service;
 
-import br.senac.rj.backend.dao.DoadorDao;
-import br.senac.rj.backend.entity.Doador;
+import br.senac.rj.backend.dao.OrganizacaoDao;
+import br.senac.rj.backend.entity.Organizacao;
 import jakarta.ws.rs.core.Response;
 
 /**
@@ -9,11 +9,11 @@ import jakarta.ws.rs.core.Response;
  * @author reinaldo.jose
  * Classe que tem a função de centralizar a lógica de negócio relacionada à entidade Evento.
  */
-public class DoadorService {
-    private final DoadorDao dao = new DoadorDao();
+public class OrganizacaoService {
+    private final OrganizacaoDao dao = new OrganizacaoDao();
 
-    public Response salvar(Doador doador) { 	/*Salvar e atualizar estão utilizando esse mesmo ngc*/
-        Doador doadorSalvo = dao.salvar(doador);
+    public Response salvar(Organizacao doador) { 	/*Salvar e atualizar estão utilizando esse mesmo ngc*/
+        Organizacao doadorSalvo = dao.salvar(doador);
         if (doadorSalvo == null) {
             return Response.status(Response.Status.BAD_REQUEST)
             		.entity("{\"erro\":\"Não foi possível salvar o doador.\"}")
@@ -23,7 +23,7 @@ public class DoadorService {
     }
 
     public Response buscar(Long id) {
-    	Doador EventoObtido = dao.buscarPorId(id);
+    	Organizacao EventoObtido = dao.buscarPorId(id);
         if (EventoObtido == null) {
             return Response.status(Response.Status.NOT_FOUND)
             		.entity("{\"erro\":\"Evento não encontrado.\"}")
