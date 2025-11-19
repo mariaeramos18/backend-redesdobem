@@ -13,15 +13,15 @@ import lombok.Data;
 /**
  * 
  * @author reinaldo.jose
- * Entidade que representa a tabela doador.
+ * Entidade que representa a tabela organizacao.
  */
 @Entity
-@Table(name = "doador")
+@Table(name = "organizacao")
 @Data
 public class Organizacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long doador_id;
+    private Long organizacao_id;
 
     @Column(length = 150, nullable = false)
     private String nome;
