@@ -26,8 +26,8 @@ public class Organizacao {
     @Column(length = 150, nullable = false)
     private String nome;
     
-//    @Column(length = 20, nullable = false)
-//    private String cnpj;
+    @Column(length = 20, nullable = false)
+    private String cnpj;
 //    
 //    @Column(length = 100, nullable = false)
 //    private String cidade;
@@ -35,7 +35,7 @@ public class Organizacao {
 //    @Column(nullable = false)
 //    private Integer total_recebimentos;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+//    @ManyToOne
+//    @JoinColumn(name = "usuario_id")
+//    private Usuario usuario;
 }
