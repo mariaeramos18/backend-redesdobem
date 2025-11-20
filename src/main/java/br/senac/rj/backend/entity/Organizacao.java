@@ -36,6 +36,6 @@ public class Organizacao {
 //    private Integer total_recebimentos;
 
     @ManyToOne
-    @JoinColumn(name = "usuario_id", nullable = false)
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 }
