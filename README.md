@@ -194,8 +194,8 @@ Abrir o Git bash
 
 
 
-
-Começando por Usuario
+---
+**Começando por Usuario**
 
 Inserir / Atualizar
 curl -X POST http://localhost:8080/api/usuario/salvar \
@@ -215,8 +215,8 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJpYXQiOjE3NjM1OTI0MzUsImV
 
 
 
-
-Agora com a tabela Organizacao
+---
+**Agora com a tabela Organizacao**
 
 Incluir
 curl -X POST http://localhost:8080/api/organizacao/salvar \
@@ -236,8 +236,10 @@ Consultar
 curl -X GET http://localhost:8080/api/organizacao/1 \
 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJpYXQiOjE3NjM2NzIxMTgsImV4cCI6MTc2MzY3NTcxOH0.Ps5NHAWtLikjgqluqKx3aMg0JIPcfDo-_qlukpz8w1I"
 
+---
+**Agora a tabela Doacao**
 
-Agora a tabela Doacao
+
 Incluir
 curl -X POST http://localhost:8080/api/doacao/salvar \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJpYXQiOjE3NjM2NzQxNjUsImV4cCI6MTc2MzY3Nzc2NX0.TBns1Lkm-SiXAsdqLQC3czZDW2JPtMUmfZa-_oOontM" \
